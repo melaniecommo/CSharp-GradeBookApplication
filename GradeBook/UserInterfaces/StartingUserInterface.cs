@@ -59,7 +59,9 @@ namespace GradeBook.UserInterfaces
             if (type == "standard")
                 gradeBook = new StandardGradeBook(name);
             else if (type == "ranked")
+            {
                 gradeBook = new RankedGradeBook(name);
+            }
             else
             {
                 Console.WriteLine("{0} is not a supported type of gradebook, please try again.",type);
@@ -67,7 +69,9 @@ namespace GradeBook.UserInterfaces
             }
 
             if (gradeBook == null)
+            {
                 return;
+            }
 
             GradeBookUserInterface.CommandLoop(gradeBook);
         }
